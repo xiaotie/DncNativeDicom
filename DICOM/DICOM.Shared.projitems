@@ -260,6 +260,14 @@
     <None Include="$(MSBuildThisFileDirectory)Dictionaries\DICOM Dictionary.tt" />
     <None Include="$(MSBuildThisFileDirectory)T4\dictionarymethods.t4" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Dictionaries\DICOMDictionary.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Dictionaries\PrivateDictionary.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
   <Choose>
     <When Condition="$(DefineConstants.Contains('NET35'))">
       <ItemGroup>
@@ -277,9 +285,12 @@
         <None Include="$(MSBuildThisFileDirectory)Dictionaries\DICOM Dictionary.xml">
           <DependentUpon>DICOM Dictionary.tt</DependentUpon>
         </None>
-        <EmbeddedResource Include="$(MSBuildThisFileDirectory)Dictionaries\DICOMDictionary.xml.gz" />
-        <None Include="$(MSBuildThisFileDirectory)Dictionaries\Private Dictionary.xml" />
-        <EmbeddedResource Include="$(MSBuildThisFileDirectory)Dictionaries\PrivateDictionary.xml.gz" />
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)Dictionaries\DICOMDictionary.xml.gz">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </EmbeddedResource>
+        <EmbeddedResource Include="$(MSBuildThisFileDirectory)Dictionaries\PrivateDictionary.xml.gz">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </EmbeddedResource>
       </ItemGroup>
     </Otherwise>
   </Choose>

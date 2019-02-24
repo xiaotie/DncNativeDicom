@@ -1,0 +1,110 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\Tests\Desktop\Test Data\minimumdict.xml" Link="TestData\minimumdict.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\Tests\Desktop\Test Data\10200904.dcm" Link="TestData\10200904.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\CR-MONO1-10-chest" Link="TestData\CR-MONO1-10-chest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\CT-MONO2-16-ankle" Link="TestData\CT-MONO2-16-ankle">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\CT1_J2KI" Link="TestData\CT1_J2KI">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\DICOMDIR" Link="TestData\DICOMDIR">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\D_CLUNIE_CT1_RLE_FRAGS.dcm" Link="TestData\D_CLUNIE_CT1_RLE_FRAGS.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH064.dcm" Link="TestData\GH064.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH133.dcm" Link="TestData\GH133.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH177_D_CLUNIE_CT1_IVRLE_BigEndian_ELE_undefinded_length.dcm" Link="TestData\GH177_D_CLUNIE_CT1_IVRLE_BigEndian_ELE_undefinded_length.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH177_D_CLUNIE_CT1_IVRLE_BigEndian_undefined_length.dcm" Link="TestData\GH177_D_CLUNIE_CT1_IVRLE_BigEndian_undefined_length.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH178.dcm" Link="TestData\GH178.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH179A.dcm" Link="TestData\GH179A.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH179B.dcm" Link="TestData\GH179B.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH184.dcm" Link="TestData\GH184.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH195.dcm" Link="TestData\GH195.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH220.dcm" Link="TestData\GH220.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH223.dcm" Link="TestData\GH223.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH227.dcm" Link="TestData\GH227.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH340.dcm" Link="TestData\GH340.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH342.dcm" Link="TestData\GH342.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH355.dcm" Link="TestData\GH355.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH364.dcm" Link="TestData\GH364.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH487.dcm" Link="TestData\GH487.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH538-jpeg1.dcm" Link="TestData\GH538-jpeg1.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH538-jpeg14sv1.dcm" Link="TestData\GH538-jpeg14sv1.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH610.dcm" Link="TestData\GH610.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\GH626.dcm" Link="TestData\GH626.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\IM-0001-0001-0001.dcm" Link="TestData\IM-0001-0001-0001.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\minimumdict.xml.gz" Link="TestData\minimumdict.xml.gz">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tests\Desktop\Test Data\test_720.dcm" Link="TestData\test_720.dcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Platform\NetCore\DICOM.NetCore.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2012-2019 fo-dicom contributors.
+// Copyright (c) 2012-2019 fo-dicom contributors.
 // Licensed under the Microsoft Public License (MS-PL).
 
 
@@ -157,14 +157,27 @@ namespace Dicom
                             reader.Process();
                         }
 #else
-                        var assembly = typeof(DicomDictionary).GetTypeInfo().Assembly;
-                        using (
-                            var stream = assembly.GetManifestResourceStream(
-                                "Dicom.Dictionaries.DICOMDictionary.xml.gz"))
+                        bool fileLoaded = false;
+                        //if (File.Exists("./Dictionaries/DICOMDictionary.xml"))
+                        //{
+                        //    using (var stream = new FileStream("./Dictionaries/DICOMDictionary.xml", FileMode.Open))
+                        //    {
+                        //        var reader = new DicomDictionaryReader(dict, DicomDictionaryFormat.XML, stream);
+                        //        reader.Process();
+                        //        fileLoaded = true;
+                        //    }
+                        //}
+
+                        if (fileLoaded == false)
                         {
-                            var gzip = new GZipStream(stream, CompressionMode.Decompress);
-                            var reader = new DicomDictionaryReader(dict, DicomDictionaryFormat.XML, gzip);
-                            reader.Process();
+                            var assembly = typeof(DicomDictionary).GetTypeInfo().Assembly;
+                            using (
+                                var stream = assembly.GetManifestResourceStream(
+                                    "Dicom.Dictionaries.DICOMDictionary.xml"))
+                            {
+                                var reader = new DicomDictionaryReader(dict, DicomDictionaryFormat.XML, stream);
+                                reader.Process();
+                            }
                         }
 #endif
                     }
@@ -188,14 +201,27 @@ namespace Dicom
                                 reader.Process();
                             }
 #else
-                            var assembly = typeof(DicomDictionary).GetTypeInfo().Assembly;
-                            using (
-                                var stream =
-                                    assembly.GetManifestResourceStream("Dicom.Dictionaries.PrivateDictionary.xml.gz"))
+                            bool fileLoaded = false;
+                            //if (File.Exists("./Dictionaries/PrivateDictionary.xml"))
+                            //{
+                            //    using (var stream = new FileStream("./Dictionaries/PrivateDictionary.xml", FileMode.Open))
+                            //    {
+                            //        var reader = new DicomDictionaryReader(dict, DicomDictionaryFormat.XML, stream);
+                            //        reader.Process();
+                            //        fileLoaded = true;
+                            //    }
+                            //}
+
+                            if(fileLoaded == false)
                             {
-                                var gzip = new GZipStream(stream, CompressionMode.Decompress);
-                                var reader = new DicomDictionaryReader(dict, DicomDictionaryFormat.XML, gzip);
-                                reader.Process();
+                                var assembly = typeof(DicomDictionary).GetTypeInfo().Assembly;
+                                using (
+                                    var stream =
+                                        assembly.GetManifestResourceStream("Dicom.Dictionaries.PrivateDictionary.xml"))
+                                {
+                                    var reader = new DicomDictionaryReader(dict, DicomDictionaryFormat.XML, stream);
+                                    reader.Process();
+                                }
                             }
 #endif
                         }
