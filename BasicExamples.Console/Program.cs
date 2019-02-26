@@ -7,6 +7,7 @@ namespace BasicExamples
         static void Main(string[] args)
         {
             BasicTests.TestLoadDicomFile();
+            BasicTests.TestJPEGLSNearLosslessEncode();
             Console.Read();
         }
     }

@@ -1,8 +1,10 @@
 using System;
+using System.IO;
 
 namespace BasicExamples
 {
     using Dicom;
+    using Dicom.Imaging.Codec;
 
     public class BasicTests
     {
@@ -11,6 +13,13 @@ namespace BasicExamples
             TestLoadDicomImageFile(
                 @"./TestData/GH342.dcm",
                 @"./TestData/GH538-jpeg14sv1.dcm"
+                );
+        }
+
+        public static void TestJPEGLSNearLosslessEncode()
+        {
+            TestJPEGLSNearLosslessEncode(
+                @"./TestData/GH342.dcm"
                 );
         }
 
@@ -34,6 +43,18 @@ namespace BasicExamples
             {
                 Console.WriteLine(ex.Message);
                 Console.WriteLine(ex.StackTrace);
+            }
+        }
+
+        private static void TestJPEGLSNearLosslessEncode(String filePath)
+        {
+            DicomFile dicomFile = DicomFile.Open(filePath);
+            var lossyFile = dicomFile.Clone(DicomTransferSyntax.JPEGLSNearLossless,
+                new DicomJpegLsParams { AllowedError = 12 });
+            using (MemoryStream ms = new MemoryStream())
+            {
+                lossyFile.Save(ms);
+                Console.WriteLine(ms.Length / 1000);
             }
         }
     }

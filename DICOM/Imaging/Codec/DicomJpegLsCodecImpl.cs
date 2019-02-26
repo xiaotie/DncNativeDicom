@@ -24,6 +24,7 @@ namespace Dicom.Imaging.Codec
             {
                 width = oldPixelData.Width,
                 height = oldPixelData.Height,
+                allowedLossyError = parameters.AllowedError,
                 bitsPerSample = oldPixelData.BitsStored,
                 stride = oldPixelData.BytesAllocated * oldPixelData.Width * oldPixelData.SamplesPerPixel,
                 components = oldPixelData.SamplesPerPixel,
