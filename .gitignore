@@ -33,3 +33,4 @@ DICOM/T4/part16.xml
 AppPackages/
 Documentation/Help/
 Platform/Mono/Dictionaries/*.xml.gz
+*.nupkg

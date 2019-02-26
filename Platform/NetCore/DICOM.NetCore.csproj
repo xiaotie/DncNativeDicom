@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
-    <AssemblyName>Dicom.Core</AssemblyName>
+    <AssemblyName>Dicom.CoreDNC</AssemblyName>
     <RootNamespace>Dicom</RootNamespace>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <SignAssembly>true</SignAssembly>
